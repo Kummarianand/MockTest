@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Test</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <div id="landing-page" class="container text-center py-5">
+    <h1 class="display-3 text-white mb-4">Welcome to the Computer Science Mock Test</h1>
+    <p class="lead text-white mb-4">Test your knowledge with a variety of computer science questions.</p>
+    <button class="btn btn-success btn-lg px-4 py-3" onclick="showLoginPage()">Start Test</button>
+  </div>
+
+  <!-- Login Page -->
+  <div id="login-section" class="container text-center hidden py-5">
+    <h2>Login to Start</h2>
+    <input type="text" id="name" class="form-control my-3" placeholder="Enter your name" required />
+    <input type="email" id="email" class="form-control my-3" placeholder="Enter your email" required />
+    <button class="btn btn-primary btn-lg" onclick="startTest()">Start Test</button>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quiz-section" class="container text-center hidden py-5">
+    <h2 id="welcome-msg"></h2>
+    <div id="time" class="fs-4 mb-4">10:00</div>
+    <div id="question-box"></div>
+    <div id="options-box"></div>
+    <button class="btn btn-secondary" onclick="prevQuestion()">Previous</button>
+    <button class="btn btn-secondary" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="result-section" class="container text-center hidden py-5">
+    <h2>Test Completed</h2>
+    <p id="candidate-name"></p>
+    <p id="final-score"></p>
+    <div id="review-answers"></div>
+    <button class="btn btn-warning" onclick="restartTest()">Take Test Again</button>
+  </div>
+  <div id="quiz-section" class="hidden">
+  <div id="question-box"></div>
+  <div id="options-box"></div>
+  <div>
+    <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
+  </div>
+</div>
+
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
